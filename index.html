@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenEFX Enquiry Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <img class ="logo" src="/assert/green_logo.png" alt="logo">
+        </div>
+
+        <div class="form">
+            <div class="form_elements">
+                <form action="" class="formdetails" method="POSt" id="myForm" action="index.php">
+                    <!-- <div class="photo">
+                        <label for="image" class="texts">Select image:</label>
+                        <input type="file" id="image" name="image" accept="image" class="addphoto"><br><br>
+                    </div> -->
+                    <div class="irow">   
+                        <div class="name"> 
+                            <div class="first_name">
+                                <label for="name" class="texts">First Name:</label>
+                                <input type="text" class="inputbox" placeholder="first_name" name="first_name">
+                            </div>
+                            <div class="last_name">
+                                <label for="name" class="texts">last Name:</label>
+                                <input type="text" class="inputbox" placeholder="last_name" name="last_name" >
+                            </div>
+                        </div>
+                        <div class="email">
+                            <label for="name" class="texts">Email:</label>
+                            <input type="email" class="inputbox" placeholder="Email" name="email">
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="phone">
+                            <label for="" class="texts phone">DOB:</label>
+                            <div class="dobin">
+                                <input type="number" min="1" max="31" class="inputbox" placeholder="Date" name="date">
+                                <input type="number" min="1" max="12" class="inputbox" placeholder="Month" name="month">
+                                <input type="number" min= "1990" max ="2020" class="inputbox" placeholder="Year" name="year">
+                            </div>
+                            
+                        </div>
+                        <div class="dob">
+                            <label for="phone" class="texts dob">Phone:</label>
+                            <input type="tel" class="inputbox" placeholder="number" name="phone">
+
+                        </div>
+                    </div>
+                    <div class="address">
+                        <label for="name" class="texts">Address:</label>
+                        <textarea name="addr" id="" cols="130" rows="1" class="inputbox add" placeholder="Address" name="address"></textarea>
+                    </div>
+                    <div class="row3">
+                        <div class="radio-container">
+                            <label for="text" class="texts">Gender:</label>
+                            <div class="radio">
+                                <label class="radio-label">
+                                    <input type="radio" name="option" value="male" name="gender">
+                                    Male
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="option" value="female" name="gender">
+                                    Female
+                                </label>
+                            </div>
+                        </div>    
+                        <div class="Status">
+                            <label for="options" class="texts">Current Status:</label>
+                            <select id="status_select" class="options inputbox" name="current_status">
+                                <option value="Employed"class="optiontext avoid" selected>Employed</option>
+                                <option value="Unemployed"class="optiontext avoid">Unemployed</option>
+                                <option value="Student"class="optiontext avoids">Student</option>
+                                <option value="other"class="optiontext" id="status">other</option>
+                                <input type="text" class="other inputbox " id="status_input" name="current_status_input" >
+                            </select>
+                        </div>
+                        <div class="feild">
+                            <label for="text" class="texts">
+                                Feild of Work/Study:
+                            </label>
+                            <input type="text" placeholder="college name" class="inputbox" name="feild_status">
+                        </div>
+                    </div>  
+                    <div class="row4">
+                        <div class="courese_interest">
+                            <label for="options" class="texts">course:</label> <br>
+                            <select id="options" name="course" class="options inputbox">
+                                <option value="animation"class="optiontext" selected>animation</option>
+                                <option value="Editing"class="optiontext">Editing</option>
+                                <option value="graphic designing"class="optiontext">graphic designing</option>
+                                <option value="3d modeling"class="optiontext">3d modeling</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row5">
+                        <div class="othercourse">
+                            <label for="options" class="texts">Do you interested in any other course:</label> <br>
+                            <select id="other_course" name="other_course" class="options inputbox">
+                                <option value="Yes"class="optiontext">Yes</option>
+                                <option value="No"class="optiontext" selected>No</option>
+                                <input type="text" class="interested inputbox other" id="other_course_input" name="other_course_input">
+                            </select>   
+                        </div>     
+                    </div>
+                    <div class="row6">
+                        <div class="row6c1">
+                            <div class="othercourse">
+                                <label for="options" class="texts">Reasons for Interest in the Course:</label> <br>
+                                <select id="options" name="options" class="options inputbox" name="interest">
+                                    <option value="Career Advancement"class="optiontext" selected>Career Advancement</option>
+                                    <option value="Personal Interes"class="optiontext">Personal Interest</option>
+                                    <option value="Skill Development"class="optiontext">Skill Development</option>
+                                    
+                                </select>   
+                            </div>     
+                            <div class="hearus">
+                                <label for="options" class="texts">How did you hear about us?</label> <br>
+                                <select id="select_hearus" name="hear_us" class="options inputbox">
+                                    <option value="social media"class="optiontext" selected>social media</option>
+                                    <option value="college"class="optiontext">college</option>
+                                    <option value="friends"class="optiontext">friends</option>
+                                    <option value="other"class="optiontext">other</option>
+                                    <input type="text" id = "hearus_input" class="interested inputbox other" name="hear_us-input">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row7">
+                        <label for="options" class="texts">Would you like to receive updates and promotional information? (Yes/No):</label> <br>
+                            <select id="options" name="promotion" class="options inputbox">
+                                <option value="Yes"class="optiontext" selected>Yes</option>
+                                <option value="no"class="optiontext">No</option>
+                            </select>    
+                    </div>
+                    <div class="error-message"></div>
+
+                <div class="last">
+                    <input type="submit" value="SUBMIT" class="submit" name="submit">
+                </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script defer src="script.js"></script>
+</html>

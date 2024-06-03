@@ -1,0 +1,189 @@
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 100%;
+    /* background-color: #cbdac4d6; */
+}
+.logo{
+    padding: 2rem;
+    height: 80%;
+    width: auto;
+    filter: brightness(150%);
+    z-index: 1;
+}
+
+body{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('assert/2147746709.jpg') no-repeat;
+    background-position: 20% 40%;    
+    
+    /* height: 40rem;
+    width: 100%;     */
+    /* margin: 0%;
+    padding: 0%; */
+
+}
+.form{
+    height: 65rem;
+    width: 60%;
+    background: rgba(255, 255, 255, 0.4); /* White background with 80% opacity */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    left: 17rem;
+
+}
+.form_elements{
+    padding: 2.5rem;
+}
+
+.addphoto{
+    height: 3rem;
+}
+
+.texts{
+    font-size: 1.3rem;
+    color: azure;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    width: 43%;
+    gap: 1rem;
+}
+.inputbox{
+    background-color: rgba(76, 73, 73, 0.3);
+    box-sizing: 1rem;
+    
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    outline: none;
+    width:90%
+    
+}
+.irow{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 100%;
+    gap: 3.4rem;
+    
+}
+.row2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 2rem;
+}
+.dob{
+    width: 50%;
+}
+.phone{
+    width: 50%;
+}
+.email{
+    width: 50%;
+}
+.dobin{
+    display: flex;
+    flex-direction: row;
+    width: 88%;
+    gap: 1rem}
+.formdetails{
+    padding: 1rem;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.add{
+    width: 95%;
+}
+
+.row3{
+    display: flex;
+    flex-direction: row ;
+    width: 98%;
+    gap: 5rem;
+    height: 4rem;
+}
+.radio-container{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding-top: 1rem;
+}
+.radio{
+    font-size: 1rem;
+    margin-top: 0.6rem;
+}
+.Status{
+    width: 30%;
+    margin-top: 1rem;
+}
+.courese_interest{
+    width: 100%;
+    margin-top: 3.5rem;
+}
+.options{
+    width: 100%;
+    height: 2.5rem;
+   
+}
+.option{
+    width: 65%;
+    height: 2rem;
+}
+.other{
+    display: none;
+    width: 97%;
+}
+.feild{
+    margin-top: 1rem;
+}
+.optiontext{
+    font-size: 1rem;
+    
+}
+.row5{
+    width: 97%;
+    margin-top: 1rem;
+}
+.row4{
+    width: 97%;
+    margin-top: 1rem;
+}
+.row6{
+    width: 97%;
+    margin-top: 1rem;
+}
+.row6c1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.row7{
+    width: 97%;
+    margin-top: 1rem;
+}
+.last{
+    width: 97%;
+    margin-top: 3rem;
+    
+}
+.submit{
+    padding: 1rem;
+    color: black;
+    font-weight: 300;
+    position: relative;
+    left: 38%;
+    width: 9rem;
+    font-size: 1em;
+}
