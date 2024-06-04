@@ -3,14 +3,63 @@
     
     const form = document.getElementById('myForm');
     form.forEach(function (e) {
-        e.addEventListener('submit', function (event) {
-            event.preventDefault();
-    
+      e.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!isValidPhoneNumber(phoneInput.value)) {
+          event.preventDefault(); // Prevent form submission
+          phoneInput.classList.add('error'); // Add error class for styling (optional)
+          alert('Invalid phone number. Please enter a valid 10-digit US number.');
+        } else {
+          phoneInput.classList.remove('error'); // Remove error class if present
+        }  
+
+
+
+
+
+
+
+
+
+        
         });
     });
 });
 
 
+
+
+
+
+// JavaScript validation
+const phoneInput = document.getElementById('phone');
+const form = document.getElementById('myForm');
+
+form.addEventListener('submit', (event) => {
+  if (!isValidPhoneNumber(phoneInput.value)) {
+    event.preventDefault(); // Prevent form submission
+    phoneInput.classList.add('error'); // Add error class for styling (optional)
+    alert('Invalid phone number. Please enter a valid 10-digit US number.');
+  } else {
+    phoneInput.classList.remove('error'); // Remove error class if present
+  }
+});
+
+
+//VALIDATION FOR THE PHONE  NUMBER
+
+
+function isValidPhoneNumber(number) {
+  const phoneUtil = require('libphonenumber-js');
+  try {
+    const parsedNumber = phoneUtil.parseAndKeepRawInput(number, 'US');
+    return phoneUtil.isValidNumber(parsedNumber);
+  } catch (error) {
+    return false;
+  }
+}
+
+// THE END
 
 // THE VALIDATION FOR THE STATUS Option
 
@@ -32,7 +81,6 @@ select.addEventListener('change', function(event) {
  
 
 // THE END
-
 
 // THE VALIDATION FOR THE OTHER COURSE SELECTION Option
 
