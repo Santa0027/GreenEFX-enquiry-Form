@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenEFX Enquiry Form</title>
     <link rel="stylesheet" href="style.css">
+      
 </head>
 <body>
     <div class="container">
@@ -14,7 +15,7 @@
 
         <div class="form">
             <div class="form_elements">
-                <form class="formdetails" method="POSt" id="myForm" action="index.php">
+                <form class="formdetails" method="post" id="myForm" action="index.php">
                     <!-- <div class="photo">
                         <label for="image" class="texts">Select image:</label>
                         <input type="file" id="image" name="image" accept="image" class="addphoto"><br><br>
@@ -23,74 +24,74 @@
                         <div class="name"> 
                             <div class="first_name">
                                 <label for="name" class="texts">First Name:</label>
-                                <input type="text" class="inputbox" placeholder="first_name" name="first_name">
+                                <input type="text" class="inputbox" placeholder="first_name" name="first_name" required>
                             </div>
                             <div class="last_name">
                                 <label for="name" class="texts">last Name:</label>
-                                <input type="text" class="inputbox" placeholder="last_name" name="last_name" >
+                                <input type="text" class="inputbox" placeholder="last_name" name="last_name" required >
                             </div>
                         </div>
                         <div class="email">
                             <label for="name" class="texts">Email:</label>
-                            <input type="email" class="inputbox" placeholder="Email" name="email">
+                            <input type="email" class="inputbox" placeholder="Email" name="email" required>
                         </div>
                     </div>
                     <div class="row2">
                         <div class="phone">
                             <label for="" class="texts phone">DOB:</label>
                             <div class="dobin">
-                                <input type="number" min="1" max="31" class="inputbox" placeholder="Date" name="date">
-                                <input type="number" min="1" max="12" class="inputbox" placeholder="Month" name="month">
-                                <input type="number" min= "1990" max ="2020" class="inputbox" placeholder="Year" name="year">
+                                <input type="number" min="1" max="31" class="inputbox" placeholder="Date" name="date" required>
+                                <input type="number" min="1" max="12" class="inputbox" placeholder="Month" name="month" required>
+                                <input type="number" min= "1990" max ="2020" class="inputbox" placeholder="Year" name="year" required>
                             </div>
                             
                         </div>
                         <div class="dob">
                             <label for="phone" class="texts dob">Phone:</label>
-                            <input type="tel" class="inputbox" placeholder="number" name="phone">
+                            <input type="tel" class="inputbox" placeholder="number" name="phone" required>
 
                         </div>
                     </div>
                     <div class="address">
                         <label for="name" class="texts">Address:</label>
-                        <textarea  id="" cols="130" rows="1" class="inputbox add" placeholder="Address" name="address"></textarea>
+                        <textarea  id="" cols="130" rows="1" class="inputbox add" placeholder="Address" name="address" required></textarea>
                     </div>
                     <div class="row3">
                         <div class="radio-container">
                             <label for="text" class="texts">Gender:</label>
                             <div class="radio">
                                 <label class="radio-label">
-                                    <input type="radio"  value="male" name="gender">
+                                    <input type="radio"  value="male" name="gender" required>
                                     Male
                                 </label>
-                                <label class="radio-label">
-                                    <input type="radio"  value="female" name="gender">
+                                <label class="radio-label"> 
+                                    <input type="radio"  value="female" name="gender" required>
                                     Female
                                 </label>
                             </div>
                         </div>    
                         <div class="Status">
                             <label for="options" class="texts">Current Status:</label>
-                            <select id="status_select" class="options inputbox" name="current_status">
+                            <select id="status_select" class="options inputbox" name="current_status" required>
                                 <option value="Employed"class="optiontext avoid" selected>Employed</option>
                                 <option value="Unemployed"class="optiontext avoid">Unemployed</option>
                                 <option value="Student"class="optiontext avoids">Student</option>
                                 <option value="other"class="optiontext" id="status">other</option>
-                                
+                                <input type="text" class="other inputbox " id="status_input" name="current" >
                             </select>
-                            <input type="text" class="other inputbox " id="status_input" name="current_status_input" >
+                            
                         </div>
                         <div class="feild">
                             <label for="text" class="texts">
                                 Feild of Work/Study:
                             </label>
-                            <input type="text" placeholder="college name" class="inputbox" name="feild_status">
+                            <input type="text" placeholder="college name" class="inputbox" name="feild_status" required>
                         </div>
                     </div>  
                     <div class="row4">
                         <div class="courese_interest">
                             <label for="options" class="texts">course:</label> <br>
-                            <select id="options" name="course" class="options inputbox">
+                            <select id="options" name="course" class="options inputbox" required>
                                 <option value="animation"class="optiontext" selected>animation</option>
                                 <option value="Editing"class="optiontext">Editing</option>
                                 <option value="graphic designing"class="optiontext">graphic designing</option>
@@ -102,7 +103,7 @@
                     <div class="row5">
                         <div class="othercourse">
                             <label for="options" class="texts">Do you interested in any other course:</label> <br>
-                            <select id="other_course" name="other_course" class="options inputbox">
+                            <select id="other_course" name="other_course" class="options inputbox" required >
                                 <option value="Yes"class="optiontext">Yes</option>
                                 <option value="No"class="optiontext" selected>No</option>
                                 <input type="text" class="interested inputbox other" id="other_course_input" name="other_course_input">
@@ -113,7 +114,7 @@
                         <div class="row6c1">
                             <div class="othercourse">
                                 <label for="options" class="texts">Reasons for Interest in the Course:</label> <br>
-                                <select id="options" class="options inputbox" name="interest">
+                                <select id="options" class="options inputbox" name="interest" required>
                                     <option value="Career Advancement"class="optiontext" selected>Career Advancement</option>
                                     <option value="Personal Interes"class="optiontext">Personal Interest</option>
                                     <option value="Skill Development"class="optiontext">Skill Development</option>
@@ -122,19 +123,20 @@
                             </div>     
                             <div class="hearus">
                                 <label for="options" class="texts">How did you hear about us?</label> <br>
-                                <select id="select_hearus" name="hear_us" class="options inputbox">
+                                <select id="select_hearus" name="hear_us" class="options inputbox" required>
                                     <option value="social media"class="optiontext" selected>social media</option>
                                     <option value="college"class="optiontext">college</option>
                                     <option value="friends"class="optiontext">friends</option>
                                     <option value="other"class="optiontext">other</option>
-                                    <input type="text" id = "hearus_input" class="interested inputbox other" name="hear_us-input">
+                                    
                                 </select>
+                                <input type="text" name="cc" id = "hearus_input" class="interested inputbox other">
                             </div>
                         </div>
                     </div>
                     <div class="row7">
                         <label for="options" class="texts">Would you like to receive updates and promotional information? (Yes/No):</label> <br>
-                            <select id="options" name="promotion" class="options inputbox">
+                            <select id="options" name="promotion" class="options inputbox" required>
                                 <option value="Yes"class="optiontext" selected>Yes</option>
                                 <option value="no"class="optiontext">No</option>
                             </select>    
@@ -144,11 +146,34 @@
                 <div class="last">
                     <input type="submit" value="SUBMIT" class="submit" name="submit">
                 </div>
+                <div id="response"></div>
                 </form>
             </div>
         </div>
 
     </div>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var formData = new FormData(this);
+
+            // Create an AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'index.php', true);
+
+            xhr.onload = function() {
+                <!-- conole.log("santha "); -->
+                if (xhr.status === 200) {
+                    document.getElementById('response').textContent = "successfully";
+                } else {
+                    document.getElementById('response').textContent = 'An error occurred while submitting the form.';
+                }
+            };
+
+            xhr.send(formData); // Send the form data
+        });
+    </script>
 
 </body>
 <script defer src="script.js"></script>

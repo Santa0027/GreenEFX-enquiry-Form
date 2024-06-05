@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['submit'])) {
+if (($_SERVER["REQUEST_METHOD"] == "POST")) {
 
 
     $first_name = $_POST['first_name'];
@@ -12,76 +12,38 @@ if (isset($_POST['submit'])) {
     $DOB = $date . "/" . $month . "/" . $year;
     $phone = $_POST['phone'];
     $address = $_POST['address'];
-    // $gender = $_POST['gender'];
+    $gender = $_POST['gender'];
     $current_status = $_POST['current_status'];
-    $current_status_input = $_POST['current_status_input'];
+    $current_status_input = $_POST['current'];
     $feild_status = $_POST['feild_status'];
     $course = $_POST['course'];
     $other_course = $_POST['other_course'];
     $other_course_input = $_POST['other_course_input'];
     $interest = $_POST['interest'];
     $hear_us = $_POST['hear_us'];
-    $hear_us_input = $_POST['hear_us-input'];
+    $input = $_POST['cc'];
     $promation = $_POST['promotion'];
-    $status = '';
-    
 
-    
-
-
-
-    $full_cname =$other_course_input=$current_status_input=$hear_us_input= filter_input(INPUT_POST, "cname", FILTER_SANITIZE_SPECIAL_CHARS);
-    $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-    $address = filter_input(INPUT_POST, "caddress", FILTER_SANITIZE_SPECIAL_CHARS);
-    $phone = filter_input(INPUT_POST, "zip", FILTER_SANITIZE_NUMBER_INT);
-
-
-    // function dummy($current_status, $current_status_input)
-    // {
-    //     $arrstatus = array('Employed', 'Unemployed', 'Student');
-    //     if (in_array($current_status, $arrstatus)) {
-    //         $status = $current_status;
-    //         echo $status;
-    //     } else {
-    //         $status = $current_status_input;
-    //         echo $status;
-    //     }
-    //     return $status;
-    // }
-
-    // dummy($current_status,$current_status_input);
-
-    // echo $status;
 
 
   
 
-$arrstatus = array("Employed", "Unemployed", "Student");
-
-function dummy($current_status, $arrstatus, $current_status_input = "") {
-
-  if (in_array($current_status, $arrstatus)) {
-    $status = $current_status;
-    // Consider returning or logging a message instead of echoing for clarity (optional)
-    // echo "Status already exists: $status";
-  }
-
-  // Assign the input status only if it's not empty to avoid unnecessary assignments
-  if (!empty($current_status_input)) {
-    $status = $current_status_input;
-  }
-    return $status;
-}
-
-// Example usage (assuming $current_status is not in $arrstatus and $current_status_input has a value)
-
-$new_status = dummy($current_status, $arrstatus, $current_status_input); // Pass the input value
-
-echo "The status is: $new_status";
 
 
+    // $full_cname =$other_course_input=$current_status_input=$hear_us_input= filter_input(INPUT_POST, "cname", FILTER_SANITIZE_SPECIAL_CHARS);
+    // $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+    // $address = filter_input(INPUT_POST, "caddress", FILTER_SANITIZE_SPECIAL_CHARS);
+    // $phone = filter_input(INPUT_POST, "zip", FILTER_SANITIZE_NUMBER_INT);
 
+    $new_variable1= empty($_POST['current']) ? $current_status : $current_status_input;
+    
+    $new_variable2= empty($_POST['other_course_input']) ? $other_course : $other_course_input;
 
+    $new_variable3 = !empty($_POST['cc']) ? $input : $hear_us;
+
+    // echo "/variable 1: \n $new_variable1";
+    // echo "/variable 2: \n $new_variable2";
+    // echo "/variable 3: \n $new_variable3";
 
 
 
@@ -99,8 +61,12 @@ echo "The status is: $new_status";
     );
 
     $sql = "INSERT INTO enquiry_data (C_NAME,EMAIL,DOB,PHONE_NO,C_ADDRESS,GENDER,CURRENT_STATUS,FEILD_OF_WORK,COURSE,INTERESTED,OTHER_COURSE,REASON,HEAR_US,PROMATION)
-     VALUE('$full_name','$email','$DOB','$phone','$address','$feild_status','$course','$other_course','$other_course_input','$interest','$hear_us','$promation')";
-    $r = mysqli_query($con, $sql);
+     VALUE()";
+    if ($con->ping()) {
+      echo "ok";
+    } else {
+      echo "Error: ";
+    }
 
 }
 
