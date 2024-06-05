@@ -63,7 +63,7 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
   $sql = "INSERT INTO enquiry_data(C_NAME,EMAIL,DOB,PHONE_NO,C_ADDRESS,GENDER,CURRENT_STATUS,FEILD_OF_WORK,COURSE,INTERESTED,OTHER_COURSE,REASON,HEAR_US,PROMATION)
      VALUE('$full_name','$email','$DOB','$phone','$address','$gender','$new_variable1','$feild_status','$course','$other_course','$new_variable2','$interest','$new_variable3','$promation')";
 
-  $r = mysqli_query($con, $sql);
+  // $r = mysqli_query($con, $sql);
 
 
   if ($con->query($sql) === TRUE) {
@@ -103,3 +103,39 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
     $sql = "INSERT INTO Enquiry_data(C_NAME,EMAIL,PHONE_NO,) VALUE('$full_name','$email','$phone')";
     $r = mysqli_query($con, $sql);
  -->
+
+
+
+
+
+
+<!-- 
+  <script>
+    const form= document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+
+        var formData = new FormData(this);
+
+        // Create an AJAX request
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'index.php', true);
+
+        xhr.onload = function() {
+            console.log("santha ");
+            if (xhr.status === 200) {
+                document.getElementById('response').textContent = "Successfully submitted!";
+                document.getElementById('myForm').reset(); 
+            } else {
+                document.getElementById('response').textContent = 'An error occurred while submitting the form.';
+            }
+        };
+
+        xhr.send(formData); // Send the form data
+   
+    });
+</script> -->
+
+
+
+<!-- <a href="download.php" class="btn btn-primary">Download Data</a> -->
