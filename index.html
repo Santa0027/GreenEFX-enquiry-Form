@@ -148,32 +148,38 @@
                 </div>
                 <div id="response"></div>
                 </form>
+                <a href="download.php" class="btn btn-primary">Download Data</a>
+
             </div>
         </div>
 
     </div>
     <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+    const form= document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
 
-            var formData = new FormData(this);
+        var formData = new FormData(this);
 
-            // Create an AJAX request
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'index.php', true);
+        // Create an AJAX request
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'index.php', true);
 
-            xhr.onload = function() {
-                <!-- conole.log("santha "); -->
-                if (xhr.status === 200) {
-                    document.getElementById('response').textContent = "successfully";
-                } else {
-                    document.getElementById('response').textContent = 'An error occurred while submitting the form.';
-                }
-            };
+        xhr.onload = function() {
+            console.log("santha ");
+            if (xhr.status === 200) {
+                document.getElementById('response').textContent = "Successfully submitted!";
+                document.getElementById('myForm').reset(); 
+            } else {
+                document.getElementById('response').textContent = 'An error occurred while submitting the form.';
+            }
+        };
 
-            xhr.send(formData); // Send the form data
-        });
-    </script>
+        xhr.send(formData); // Send the form data
+   
+    });
+</script>
+
 
 </body>
 <script defer src="script.js"></script>

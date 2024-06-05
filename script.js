@@ -1,92 +1,24 @@
-// (function () {
-//   "use strict";
-  
+// document.getElementById('myForm').addEventListener('submit', function(event) {
+//         event.preventDefault(); // Prevent the default form submission
+//         console.log("START");
 
-//     // Define displayError function outside the forEach loop
-//         function displayError(thisForm, error) {
-//             thisForm.querySelector('.loading').classList.remove('d-block');
-//             thisForm.querySelector('.error-message').innerHTML = error;
-//             thisForm.querySelector('.error-message').classList.add('d-block');
-//         }
+//         var formData = new FormData(this);
 
-//     const forms = document.querySelectorAll('.formdetails');
-//     forms.forEach(function (e) {
-//       e.addEventListener('submit', function (event) {
-//         event.preventDefault();
+//         // Create an AJAX request
+//         var xhr = new XMLHttpRequest();
+//         xhr.open('POST','index.php', true);
 
-//         let action = thisForm.getAttribute('action');
-//         let formData = new FormData(thisForm);
-//         thisForm.reset();
-
-//          if (recaptcha) {
-//                 if (typeof grecaptcha !== "undefined") {
-//                     grecaptcha.ready(function() {
-//                         try {
-//                             grecaptcha.execute(recaptcha, {action: 'form_submit'})
-//                             .then(token => {
-//                                 formData.set('recaptcha-response', token);
-//                                 form_submit(thisForm, action, formData);
-//                             })
-//                         } catch(error) {
-//                             displayError(thisForm, error);
-//                         }
-//                     });
-//                 } else {
-//                     displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
-//                 }
+//         xhr.onload = function() {
+//             console.log("santha ");
+//             if (xhr.status === 200) {
+//                 document.getElementById('response').textContent = "Successfully submitted!";
 //             } else {
-//                 form_submit(thisForm, action, formData);
-//               }
-//         });
+//                 document.getElementById('response').textContent = 'An error occurred while submitting the form.';
+//             }
+//         };
+
+//         xhr.send(formData); // Send the form data
 //     });
-// });
-
-
-
-
-
-
-
-// function form_submit(thisForm, action, formData) {
-//         fetch(action, {
-//             method: 'POST',
-//             body: formData,
-//             headers: {'X-Requested-With': 'XMLHttpRequest'}
-//         })
-//         .then(response => {
-//             if (response.ok) {
-//                 console.log(response);
-//                 console.log(response.text());
-//                 var data=response.statusText;
-//                  console.log(data);
-//                 return response.text();
-                
-//             } else {
-//                 throw new Error(`${response.status} ${response.statusText} ${response.url}`);
-//             }
-//         })
-//         .then(data => {
-//             thisForm.querySelector('.loading').classList.remove('d-block');
-//             console.log(data);
-//             if (data.trim() == 'OK') {
-//                 // console.log("working");
-
-//                 thisForm.querySelector('.sent-message').classList.add('d-block');
-//                 thisForm.reset();
-//             } else {
-//                 console.log("not working ");
-//                 displayError(thisForm,"something went wrong .");
-//             }
-//         })
-//         .catch((error) => {
-//             displayError(thisForm,error);
-//         });
-//     }
-
-
-
-
-
 
 
 
