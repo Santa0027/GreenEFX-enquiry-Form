@@ -4,7 +4,7 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
 
   $first_name = $_POST['first_name'];
   $last_name = $_POST['last_name'];
-  $full_name = $first_name."\t".$last_name;
+  $full_name = $first_name;
   $email = $_POST['email'];
   $date = $_POST['date'];
   $month = $_POST['month'];
@@ -34,7 +34,6 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
   // $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
   // $address = filter_input(INPUT_POST, "caddress", FILTER_SANITIZE_SPECIAL_CHARS);
   // $phone = filter_input(INPUT_POST, "zip", FILTER_SANITIZE_NUMBER_INT);
-  // $full_name = filter_input(INPUT_POST, "cname", FILTER_SANITIZE_SPECIAL_CHARS);
 
   $new_variable1 = empty($_POST['current']) ? $current_status : $current_status_input;
 

@@ -1,11 +1,12 @@
 
-var tableContainer = document.getElementById("table");
+                console.log("first");
+    var searchForm = document.getElementById("form");
+    var tableContainer = document.getElementById("s");
+    
+    searchForm.addEventListener('submit',function(){
+
+        tableContainer.classList.add('.hidden');
+        console.log("sad");
+    })
 
 
-var searchForm = document.getElementById("search");
-
-searchForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  tableContainer.style.display = "none";
-});

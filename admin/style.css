@@ -33,3 +33,9 @@ td {
 .se label{
     font-size: 1.3rem;
 }
+.hidden {
+    display: none;
+}
+.container{
+    height: auto;
+}
