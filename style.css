@@ -305,6 +305,7 @@ button {
     transition: color 0.4s;
 }
 
+ 
 .last:hover button {
     color: rgb(0, 0, 0);
 }
