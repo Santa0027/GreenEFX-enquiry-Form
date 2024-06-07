@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenEFX Enquiry Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        
+
+        <div class="form">
+           
+            <div class="form_elements">
+                <h1 style="color: white; text-align: center; text-transform: uppercase;">enquery form</h1>
+                 <!-- <div class="heading">
+                <img class ="logo" src="assert/green_logo.png" alt="logo">
+            </div> -->
+                <form class="formdetails" method="post" id="myForm" action="index.php">
+                    <div class="photo" style="color: white;">
+                        <label for="image" class="texts">Select image : </label>
+                        <input style="color: white; background: none;" type="file" id="image" name="image" accept="image"  class="addphoto"><br><br>
+                    </div>
+                    <div class="irow">   
+                        <div class="name "> 
+                            <div class="first_name form-control">
+                                <input type="text" class="inputbox"  name="first_name" required>
+                                <label>
+                                <span style="transition-delay:0ms">F</span>
+                                <span style="transition-delay:50ms">i</span>
+                                <span style="transition-delay:100ms">r</span>
+                                <span style="transition-delay:150ms">s</span>
+                                <span style="transition-delay:200ms">t</span>
+                                <span></span>
+                                <span style="transition-delay:250ms">n</span>
+                                <span style="transition-delay:300ms">a</span>
+                                <span style="transition-delay:350ms">m</span>
+                                <span style="transition-delay:400ms">e</span>
+                             </label>
+                                
+                            </div>
+                            <div class="last_name form-control">
+                                <input type="text" class="inputbox"  name="last_name" required >
+                                <label>
+                                    <span style="transition-delay:0ms">L</span>
+                                    <span style="transition-delay:50ms">a</span>
+                                    <span style="transition-delay:100ms">s</span>
+                                    <span style="transition-delay:150ms">t</span>
+                                    <span></span>
+                                    <span style="transition-delay:250ms">n</span>
+                                    <span style="transition-delay:300ms">a</span>
+                                    <span style="transition-delay:350ms">m</span>
+                                    <span style="transition-delay:400ms">e</span>
+                                 </label>
+
+                            </div>
+                        </div>
+                        <div class="email form-control">
+                            <input type="email" class="inputbox" name="email" required>
+                            <label>
+                                <span style="transition-delay:0ms">E</span>
+                                <span style="transition-delay:50ms">m</span>
+                                <span style="transition-delay:100ms">a</span>
+                                <span style="transition-delay:150ms">i</span>
+                                <span style="transition-delay:200ms">l</span>
+                               
+                             </label>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="phone form-control">
+                            <label style="position: relative;" class="texts phone">DOB:</label>
+                            <div class="dobin">
+                                <input type="number" min="1" max="31" class="inputbox" placeholder="Date" name="date" required>
+                                <input type="number" min="1" max="12" class="inputbox" placeholder="Month" name="month" required>
+                                <input type="number" min= "1990" max ="2020" class="inputbox" placeholder="Year" name="year" required>
+                            </div>  
+                            
+                        </div>
+                        <div class="dob form-control" style="padding-top: 2rem;">
+                            <input type="tel" class="inputbox" name="phone" required>
+                            <label style="top: 45px;">
+                                <span style="transition-delay:0ms">P</span>
+                                <span style="transition-delay:50ms">h</span>
+                                <span style="transition-delay:100ms">o</span>
+                                <span style="transition-delay:150ms">n</span>
+                                <span style="transition-delay:200ms">e</span>
+                             </label>
+                            
+
+                        </div>
+                    </div>
+                    <div class="address ">
+                        <label for="name" class="texts">Address:</label>
+                        <textarea  id="" cols="130" rows="1" class="inputbox add" placeholder=" Address" name="address" required></textarea>
+                    </div>
+                    <div class="row3">
+                        <div class="radio-container">
+                            <label style="padding-top: 0.7rem;" for="text" class="texts">Gender :</label>
+                            <div class="radio">
+                                <label class="radio-label">
+                                    <input type="radio"  value="male" name="gender" required>
+                                    Male
+                                </label>
+                                <label class="radio-label"> 
+                                    <input type="radio"  value="female" name="gender" required>
+                                    Female
+                                </label>
+                            </div>
+                        </div>    
+                        <div class="Status">
+                            <label for="options" class="texts form-control">Current Status:</label>
+                            <select id="status_select" class="options inputbox" name="current_status" required>
+                                <option value="Employed"class="optiontext avoid" selected>Employed</option>
+                                <option value="Unemployed"class="optiontext avoid">Unemployed</option>
+                                <option value="Student"class="optiontext avoids">Student</option>
+                                <option value="other"class="optiontext" id="status">other</option>
+                                <input type="text" class="other inputbox " id="status_input" name="current" >
+                            </select>
+                           
+                            
+                            
+                        </div>
+                        <div class="feild form-control">
+                            <input type="text" class="inputbox" name="feild_status" required>
+                            <label>
+                                <span style="transition-delay:0ms">F</span>
+                                <span style="transition-delay:50ms">e</span>
+                                <span style="transition-delay:100ms">i</span>
+                                <span style="transition-delay:150ms">l</span>
+                                <span style="transition-delay:200ms">d</span>
+                                <span></span>
+                                <span style="transition-delay:250ms">O</span>
+                                <span style="transition-delay:300ms">f</span>
+                                <span></span>
+                                <span style="transition-delay:350ms">W</span>
+                                <span style="transition-delay:400ms">o</span>
+                                <span style="transition-delay:450ms">r</span>
+                                <span style="transition-delay:500ms">k</span>
+                                <span style="transition-delay:550ms">/</span>
+                                <span style="transition-delay:600ms">S</span>
+                                <span style="transition-delay:650ms">t</span>
+                                <span style="transition-delay:700ms">d</span>
+                                <span style="transition-delay:750ms">y</span>
+                                <span></span>
+                                <span style="transition-delay:800ms">:</span>
+                             </label>
+                           
+                        </div>
+                    </div>  
+
+                    <div class="flexing">
+                    <div class="row4">
+                        <div class="courese_interest">
+                            <label for="options" class="texts">course:</label> <br>
+                            <select id="options" name="course" class="options inputbox" required>
+                                <option value="animation"class="optiontext" selected>animation</option>
+                                <option value="Editing"class="optiontext">Editing</option>
+                                <option value="graphic designing"class="optiontext">graphic designing</option>
+                                <option value="3d modeling"class="optiontext">3d modeling</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row5">
+                        <div class="othercourse">
+                            <label for="options" class="texts">Do you interested in any other course:</label> <br>
+                            <select id="other_course" name="other_course" class="options inputbox" required >
+                                <option value="Yes"class="optiontext">Yes</option>
+                                <option value="No"class="optiontext" selected>No</option>
+                                <input type="text" class="interested inputbox other" id="other_course_input" name="other_course_input">
+                            </select>   
+                        </div>     
+                    </div>
+                </div>
+                    <div class="row6">
+                        <div class="row6c1">
+                            <div class="othercourse">
+                                <label for="options" class="texts">Reasons for Interest in the Course:</label> <br>
+                                <select id="options" class="options inputbox" name="interest" required>
+                                    <option value="Career Advancement"class="optiontext" selected>Career Advancement</option>
+                                    <option value="Personal Interes"class="optiontext">Personal Interest</option>
+                                    <option value="Skill Development"class="optiontext">Skill Development</option>
+                                    
+                                </select>   
+                            </div>     
+                            <div class="hearus">
+                                <label for="options" class="texts">How did you hear about us?</label> <br>
+                                <select id="select_hearus" name="hear_us" class="options inputbox" required>
+                                    <option value="social media"class="optiontext" selected>social media</option>
+                                    <option value="college"class="optiontext">college</option>
+                                    <option value="friends"class="optiontext">friends</option>
+                                    <option value="other"class="optiontext">other</option>
+                                    
+                                </select>
+                                <input type="text" name="cc" id = "hearus_input" class="interested inputbox other">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row7">
+                        <label for="options" class="texts">Would you like to receive updates and promotional information? (Yes/No):</label> <br>
+                            <select id="options" name="promotion" class="options inputbox" required>
+                                <option value="Yes"class="optiontext" selected>Yes</option>
+                                <option value="no"class="optiontext">No</option>
+                            </select>    
+                    </div>
+                    <div class="error-message"></div>
+                    <div class="n1">
+                        <div class="n2">
+                            <div class="last">
+                                <button type="submit" value="SUBMIT" class="submit" name="submit">submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="response" style="color: white;"></div>
+                
+                </form>
+
+                <a href="download.php" class="btn btn-primary" style="text-transform: none; text-decoration:none; color: black; background-color:white; padding: 0.5rem;" >Download Data</a>
+
+            </div>
+        </div>
+
+    </div>
+
+    
+
+  <script>
+    const form= document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+
+        var formData = new FormData(this);
+
+        // Create an AJAX request
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'index.php', true);
+
+        xhr.onload = function() {
+            console.log("santha ");
+            if (xhr.status === 200) {
+                document.getElementById('response').textContent = "Successfully submitted!";
+                document.getElementById('myForm').reset(); 
+            } else {
+                document.getElementById('response').textContent = 'An error occurred while submitting the form.';
+            }
+        };
+
+        xhr.send(formData); // Send the form data
+   
+    });
+</script>
+
+</body>
+<script defer src="script.js"></script>
+</html>
