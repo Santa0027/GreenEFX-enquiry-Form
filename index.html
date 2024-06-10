@@ -46,7 +46,7 @@
                                 
                             </div>
                             <div class="last_name form-control">
-                                <input type="text" class="inputbox"  name="last_name" >
+                                <input type="text" class="inputbox"  name="last_name" required >
                                 <label>
                                     <span style="transition-delay:0ms">L</span>
                                     <span style="transition-delay:50ms">a</span>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="email form-control">
-                            <input type="email" class="inputbox" name="email" >
+                            <input type="email" class="inputbox" name="email" required>
                             <label>
                                 <span style="transition-delay:0ms">E</span>
                                 <span style="transition-delay:50ms">m</span>
@@ -77,14 +77,14 @@
                         <div class="phone form-control">
                             <label style="position: relative;" class="texts phone">DOB:</label>
                             <div class="dobin">
-                                <input type="number" min="1" max="31" class="inputbox" placeholder="Date" name="date" >
-                                <input type="number" min="1" max="12" class="inputbox" placeholder="Month" name="month" >
-                                <input type="number" min= "1990" max ="2020" class="inputbox" placeholder="Year" name="year" >
+                                <input type="number" min="1" max="31" class="inputbox" placeholder="Date" name="date" required>
+                                <input type="number" min="1" max="12" class="inputbox" placeholder="Month" name="month" required>
+                                <input type="number" min= "1990" max ="2020" class="inputbox" placeholder="Year" name="year" required>
                             </div>  
                             
                         </div>
                         <div class="dob form-control" style="padding-top: 2rem;">
-                            <input type="tel" class="inputbox" name="phone" >
+                            <input type="tel" class="inputbox" name="phone" required>
                             <label style="top: 45px;">
                                 <span style="transition-delay:0ms">P</span>
                                 <span style="transition-delay:50ms">h</span>
@@ -98,25 +98,25 @@
                     </div>
                     <div class="address ">
                         <label for="name" class="texts">Address:</label>
-                        <textarea  id="" cols="130" rows="1" class="inputbox add" placeholder=" Address" name="address" ></textarea>
+                        <textarea  id="" cols="130" rows="1" class="inputbox add" placeholder=" Address" name="address" required></textarea>
                     </div>
                     <div class="row3">
                         <div class="radio-container">
                             <label style="padding-top: 0.7rem;" for="text" class="texts">Gender :</label>
                             <div class="radio">
                                 <label class="radio-label">
-                                    <input type="radio"  value="male" name="gender" >
+                                    <input type="radio"  value="male" name="gender" required>
                                     Male
                                 </label>
                                 <label class="radio-label"> 
-                                    <input type="radio"  value="female" name="gender" >
+                                    <input type="radio"  value="female" name="gender" required>
                                     Female
                                 </label>
                             </div>
                         </div>    
                         <div class="Status">
                             <label for="options" class="texts form-control">Current Status:</label>
-                            <select id="status_select" class="options inputbox" name="current_status" >
+                            <select id="status_select" class="options inputbox" name="current_status" required>
                                 <option value="Employed"class="optiontext avoid" selected>Employed</option>
                                 <option value="Unemployed"class="optiontext avoid">Unemployed</option>
                                 <option value="Student"class="optiontext avoids">Student</option>
@@ -128,7 +128,7 @@
                             
                         </div>
                         <div class="feild form-control">
-                            <input type="text" class="inputbox" name="feild_status" >
+                            <input type="text" class="inputbox" name="feild_status" required>
                             <label>
                                 <span style="transition-delay:0ms">F</span>
                                 <span style="transition-delay:50ms">e</span>
@@ -159,7 +159,7 @@
                     <div class="row4">
                         <div class="courese_interest">
                             <label for="options" class="texts">course:</label> <br>
-                            <select id="options" name="course" class="options inputbox" >
+                            <select id="options" name="course" class="options inputbox" required>
                                 <option value="animation"class="optiontext" selected>animation</option>
                                 <option value="Editing"class="optiontext">Editing</option>
                                 <option value="graphic designing"class="optiontext">graphic designing</option>
@@ -171,7 +171,7 @@
                     <div class="row5">
                         <div class="othercourse">
                             <label for="options" class="texts">Do you interested in any other course:</label> <br>
-                            <select id="other_course" name="other_course" class="options inputbox"  >
+                            <select id="other_course" name="other_course" class="options inputbox" required >
                                 <option value="Yes"class="optiontext">Yes</option>
                                 <option value="No"class="optiontext" selected>No</option>
                                 <input type="text" class="interested inputbox other" id="other_course_input" name="other_course_input">
@@ -183,7 +183,7 @@
                         <div class="row6c1">
                             <div class="othercourse">
                                 <label for="options" class="texts">Reasons for Interest in the Course:</label> <br>
-                                <select id="options" class="options inputbox" name="interest" >
+                                <select id="options" class="options inputbox" name="interest" required>
                                     <option value="Career Advancement"class="optiontext" selected>Career Advancement</option>
                                     <option value="Personal Interes"class="optiontext">Personal Interest</option>
                                     <option value="Skill Development"class="optiontext">Skill Development</option>
@@ -192,7 +192,7 @@
                             </div>     
                             <div class="hearus">
                                 <label for="options" class="texts">How did you hear about us?</label> <br>
-                                <select id="select_hearus" name="hear_us" class="options inputbox" >
+                                <select id="select_hearus" name="hear_us" class="options inputbox" required>
                                     <option value="social media"class="optiontext" selected>social media</option>
                                     <option value="college"class="optiontext">college</option>
                                     <option value="friends"class="optiontext">friends</option>
@@ -205,7 +205,7 @@
                     </div>
                     <div class="row7">
                         <label for="options" class="texts">Would you like to receive updates and promotional information? (Yes/No):</label> <br>
-                            <select id="options" name="promotion" class="options inputbox" >
+                            <select id="options" name="promotion" class="options inputbox" required>
                                 <option value="Yes"class="optiontext" selected>Yes</option>
                                 <option value="no"class="optiontext">No</option>
                             </select>    

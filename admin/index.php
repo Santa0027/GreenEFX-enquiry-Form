@@ -15,7 +15,7 @@
                 <img src="green_logo.png" class="img" alt="">
             </div>
             <div class="se">
-                 <form method="post"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="form">
+                 <form method="post"  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="form">
                     <label for="search" >Search:</label>
                     <input type="text" id="search" name="search_term">
                     <button type="submit" id="search-form" class="s">Search</button>
@@ -74,6 +74,7 @@
                             echo '<tr>';
                             echo '<th>ID</th>';
                             echo '<th>NAME</th>';
+                            echo '<th>PHOTO';
                             echo '<th>EMAIL</th>';
                             echo '<th>DOB</th>';
                             echo '<th>PHONE-NO</th>';
@@ -92,7 +93,11 @@
                             while ($row = mysqli_fetch_assoc($result)) {
                                 echo '<tr>';
                                 foreach ($row as $key => $value) {
-                                    echo "<td>" . $value . "</td>";
+                                    if ($key === 'PHOTO') {
+                                        echo "<td><img src='data:image;base64,{$value}' alt='Photo' height='100px' width='100px'></td>";
+                                    } else {
+                                        echo "<td>" . htmlspecialchars($value) . "</td>";
+                                    }
                                 }
                                 echo '</tr>';
                             }
