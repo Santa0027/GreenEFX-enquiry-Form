@@ -60,8 +60,25 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
     $db_name
   );
 
-  $sql = "INSERT INTO enquiry_data(C_NAME,EMAIL,DOB,PHONE_NO,C_ADDRESS,GENDER,CURRENT_STATUS,FEILD_OF_WORK,COURSE,INTERESTED,OTHER_COURSE,REASON,HEAR_US,PROMATION)
-     VALUE('$full_name','$email','$DOB','$phone','$address','$gender','$new_variable1','$feild_status','$course','$other_course','$new_variable2','$interest','$new_variable3','$promation')";
+        if (getimagesize($_FILES['image']['tmp_name'])==false)
+          {
+          echo "Please Select Image";
+        }
+        else{
+          $image=$_FILES['image']['tmp_name'];
+          $name= $_FILES['image']['name'];
+          $image= file_get_contents($image);
+          $image=base64_encode ($image);
+          // $sql="INSERT INTO img (NAME, IMAGE) VALUES ('$name', '$image')";
+          $sql = "INSERT INTO enquiry_data(C_NAME,PHOTO,C_DATA,EMAIL,DOB,PHONE_NO,C_ADDRESS,GENDER,CURRENT_STATUS,FEILD_OF_WORK,COURSE,INTERESTED,OTHER_COURSE,REASON,HEAR_US,PROMATION)
+          VALUE('$full_name','$image','$name','$email','$DOB','$phone','$address','$gender','$new_variable1','$feild_status','$course','$other_course','$new_variable2','$interest','$new_variable3','$promation')";
+        }
+
+
+
+
+  // $sql = "INSERT INTO enquiry_data(C_NAME,EMAIL,DOB,PHONE_NO,C_ADDRESS,GENDER,CURRENT_STATUS,FEILD_OF_WORK,COURSE,INTERESTED,OTHER_COURSE,REASON,HEAR_US,PROMATION)
+  //    VALUE('$full_name','$email','$DOB','$phone','$address','$gender','$new_variable1','$feild_status','$course','$other_course','$new_variable2','$interest','$new_variable3','$promation')";
 
   // $r = mysqli_query($con, $sql);
 

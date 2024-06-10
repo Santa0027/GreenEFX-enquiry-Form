@@ -68,7 +68,7 @@ select.addEventListener('change', function(event) {
 const other_course = document.getElementById('other_course');
 const other_course_input = document.getElementById('other_course_input');
 
-other_course.addEventListener('change', function(event) {
+other_course.addEventListener('click', function(event) {
     // const selectedValue = this.value;
     const selectValue = event.target.value; 
     console.log(selectValue);
